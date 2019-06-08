@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Hello World</p>
+<h3>{{Creator}}</h3>
+<a href="{% url 'about' %}">"About page"</a>
+<br/>
+<a href="{% url 'home' %}">"Go back to home page"</a>
+<h1>There are {{ count }} number of words in your text</h1>
+<h4>Total Text:</h4>
+<p>{{ userdata }}</p>
+<table>
+    <tr>
+
+        <th>Word</th>
+        <th>Repetition</th>
+
+    </tr>
+
+    <p>{% for word, counttotal in wordkey %}</p>
+        <tr>
+
+            <td>{{ word }}</td>
+            <td>{{ counttotal }}</td>
+
+        </tr>
+
+        <p>{% endfor %}</p>
+</table>
+</body>
+</html>
